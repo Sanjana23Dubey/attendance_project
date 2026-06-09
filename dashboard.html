@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teacher Dashboard</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f6f9;
+padding:40px;
+}
+
+h2{
+text-align:center;
+}
+
+table{
+width:60%;
+margin:auto;
+border-collapse:collapse;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+th,td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+th{
+background:#4facfe;
+color:white;
+}
+
+tr:hover{
+background:#f1f1f1;
+}
+
+.download{
+display:block;
+margin:20px auto;
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+background:#28a745;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#218838;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>📊 Attendance Dashboard</h2>
+
+<table>
+<tr>
+<th>Roll Number</th>
+<th>Time</th>
+</tr>
+
+{% for student in students %}
+<tr>
+<td>{{student[0]}}</td>
+<td>{{student[1]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<div class="download">
+<a href="/download">
+<button>⬇ Download Attendance Excel</button>
+</a>
+</div>
+
+</body>
+</html>

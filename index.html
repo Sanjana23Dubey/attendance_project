@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance System</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#4facfe,#00f2fe);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:10px;
+width:350px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+color:#333;
+}
+
+input{
+width:90%;
+padding:10px;
+margin-top:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+background:#4facfe;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#007bff;
+}
+
+.message{
+margin-top:15px;
+font-weight:bold;
+color:green;
+}
+
+.link{
+margin-top:15px;
+display:block;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>📋 Class Attendance</h2>
+
+<form method="POST">
+<input type="text" name="roll" placeholder="Enter Roll Number" required>
+
+<br>
+
+<button type="submit">Mark Attendance</button>
+</form>
+
+<div class="message">
+{{message}}
+</div>
+
+<a class="link" href="/dashboard">👨‍🏫 Teacher Dashboard</a>
+
+</div>
+
+</body>
+</html>
